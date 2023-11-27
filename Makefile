@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dvan-den <dvan-den@student.s19.be>         +#+  +:+       +#+         #
+#    By: dvan-den <dvan-den@student.s19.be >        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 10:44:39 by dvan-den          #+#    #+#              #
-#    Updated: 2023/10/26 20:55:56 by dvan-den         ###   ########.fr        #
+#    Updated: 2023/11/27 14:24:14 by dvan-den         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,13 +40,12 @@ COLOR_RED 	  = \033[0;31m
 
 $(OBJ_DIR)/%.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "$(COLOR_GREEN)Compiling: $(COLOR_CYAN)$<$(COLOR_DEFAULT)"
 
 all: $(OBJ_DIR) $(NAME)
-	@echo "$(COLOR_GREEN)Libft-plus compiled!$(COLOR_DEFAULT)"
 
 $(NAME): $(OBJ_DIR) $(OBJS)
 	@$(LIB) $(NAME) $(OBJS)
+	@echo "$(COLOR_GREEN)Libft-plus compiled!$(COLOR_DEFAULT)"
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
