@@ -6,7 +6,7 @@
 #    By: dvan-den <dvan-den@student.s19.be >        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 10:44:39 by dvan-den          #+#    #+#              #
-#    Updated: 2023/11/27 14:24:14 by dvan-den         ###   ########.fr        #
+#    Updated: 2023/12/01 09:15:18 by dvan-den         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,20 +45,16 @@ all: $(OBJ_DIR) $(NAME)
 
 $(NAME): $(OBJ_DIR) $(OBJS)
 	@$(LIB) $(NAME) $(OBJS)
-	@echo "$(COLOR_GREEN)Libft-plus compiled!$(COLOR_DEFAULT)"
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 	
 clean:
 	@$(RM) $(OBJ_DIR)
-	@echo "$(COLOR_RED)Removing: $(COLOR_CYAN)object files$(COLOR_DEFAULT)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "$(COLOR_RED)Removing: $(COLOR_CYAN)executable files$(COLOR_DEFAULT)"
 
 re: fclean all
-	@echo "$(COLOR_GREEN)Cleaned and rebuilt everything for Libft-plus!$(COLOR_DEFAULT)"
 
 .PHONY: all clean fclean re

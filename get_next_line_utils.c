@@ -3,25 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvan-den <dvan-den@student.s19.be>         +#+  +:+       +#+        */
+/*   By: dvan-den <dvan-den@student.s19.be >        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 20:09:55 by dvan-den          #+#    #+#             */
-/*   Updated: 2023/11/10 10:39:45 by dvan-den         ###   ########.fr       */
+/*   Updated: 2023/12/01 09:20:22 by dvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// Calculates the length of a null-terminated string 's'.
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
-}
 
 // Duplicates a null-terminated string 's1' dynamically.
 char	*ft_strdup(const char *s1)
